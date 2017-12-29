@@ -1,0 +1,52 @@
+﻿<Window x:Class="clipper.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:clipper"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="438.38" Width="401.276">
+    <StackPanel Width="Auto" Margin="0,55,0.667,18.333">
+        <Slider x:Name="slider_Copy" Height="28" Margin="0,0,294,0" RenderTransformOrigin="0.492,-0.595"/>
+        <Slider x:Name="slider" Height="28" Margin="0,0,294,0" RenderTransformOrigin="0.492,-0.595"/>
+        <Grid Margin="10" Height="292">
+            <Image x:Name="displayImage" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto"/>
+            <Button x:Name="btnCancel" FontWeight="Bold" Content="New" HorizontalAlignment="Left" Height="36" Margin="10,236,0,0" VerticalAlignment="Top" Width="102" Click="btnCancel_Click" Background="White" Foreground="Black" RenderTransformOrigin="1.254,0.331">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="Padding" Value="10,2,10,3"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnSave" FontWeight="Bold" Content="Save" HorizontalAlignment="Left" Height="35" Margin="257,236,0,0" VerticalAlignment="Top" Width="106" Click="btnSave_Click" Background="White" Foreground="Black" RenderTransformOrigin="0.431,0.439">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="Padding" Value="10,2,10,3"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+                </Button.Effect>
+            </Button>
+            <Button x:Name="btnClipBoard" Content="Clip Board" Height="35" Width="106" Margin="124,237,129,10" Click="btnClipBoard_Click" Background="White" Foreground="Black" RenderTransformOrigin="0.564,0.222" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                        <Setter Property="Padding" Value="10,2,10,3"/>
+                        <Setter Property="Background" Value="White"/>
+                    </Style>
+                </Button.Resources>
+                <Button.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+                </Button.Effect>
+            </Button>
+        </Grid>
+    </StackPanel>
+</Window>

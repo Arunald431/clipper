@@ -1,0 +1,13 @@
+﻿<Window x:Class="clipper.CanvasWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Canvas" 
+        WindowState="Maximized" 
+        WindowStyle="None" 
+        Opacity=".3" 
+        AllowsTransparency="True" 
+        Background="Black"
+        PreviewMouseDown="Window_MouseDown" 
+        PreviewMouseMove="Window_MouseMove">
+    <Canvas x:Name="cnv" />
+</Window>

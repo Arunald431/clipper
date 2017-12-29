@@ -1,0 +1,60 @@
+﻿<Window x:Class="clipper.EditScreenshot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:clipper"
+        mc:Ignorable="d"
+        Title="EditScreenshot" Height="695.683" Width="839.861" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,50,162.333">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="40*"/>
+            <ColumnDefinition Width="34*"/>
+            <ColumnDefinition Width="541*"/>
+        </Grid.ColumnDefinitions>
+        <Slider x:Name="brightnessSlider" HorizontalAlignment="Left" Height="30" Margin="3.29,31,0,0" VerticalAlignment="Top" Width="147" ValueChanged="brightnessSlider_ValueChanged" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Slider x:Name="contrastSlider" HorizontalAlignment="Left" Height="30" Margin="142.333,31,0,0" VerticalAlignment="Top" Width="135" Grid.Column="3"/>
+        <Slider x:Name="sharpnessSlider" HorizontalAlignment="Left" Height="30" Margin="349.333,31,0,0" VerticalAlignment="Top" Width="125" Grid.Column="3"/>
+        <Label x:Name="brightnessLabel" Content="Brightness" HorizontalAlignment="Left" Height="26" Margin="3.29,2,0,0" VerticalAlignment="Top" Width="94" Grid.ColumnSpan="3" Grid.Column="1"/>
+        <Label x:Name="contrastLabel" Content="Contrast" HorizontalAlignment="Left" Height="29" Margin="142.333,2,0,0" VerticalAlignment="Top" Width="53" Grid.Column="3"/>
+        <Label x:Name="sharp" Content="Sharpness" HorizontalAlignment="Left" Height="26" Margin="349.333,2,0,0" VerticalAlignment="Top" Width="77" Grid.Column="3"/>
+        <Image x:Name="displayImage" HorizontalAlignment="Center" Height="Auto" VerticalAlignment="Center" Width="Auto" Grid.Column="3" Margin="172.333,253,369,252"/>
+        <Button x:Name="btnCancel" FontWeight="Bold" Content="New" HorizontalAlignment="Left" Height="36" Margin="86,445,0,0" VerticalAlignment="Top" Width="102" Click="btnCancel_Click" Background="White" Foreground="Black" RenderTransformOrigin="1.254,0.331" Grid.ColumnSpan="3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="Padding" Value="10,2,10,3"/>
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnSave" FontWeight="Bold" Content="Save" HorizontalAlignment="Left" Height="35" Margin="368.333,445,0,0" VerticalAlignment="Top" Width="106" Click="btnSave_Click" Background="White" Foreground="Black" RenderTransformOrigin="0.431,0.439" Grid.Column="3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="Padding" Value="10,2,10,3"/>
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btnClipBoard" Content="Clip Board" Height="35" Width="106" Margin="111.333,446,324,24" Click="btnClipBoard_Click" Background="White" Foreground="Black" RenderTransformOrigin="0.564,0.222" FontWeight="Bold" Grid.Column="3">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="Padding" Value="10,2,10,3"/>
+                    <Setter Property="Background" Value="White"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="0"/>
+            </Button.Effect>
+        </Button>
+    </Grid>
+</Window>
